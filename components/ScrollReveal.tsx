@@ -13,7 +13,7 @@ export function ScrollReveal({ rootSelector = DEFAULT_ROOTS }: { rootSelector?: 
         const selector = roots.map((r) => `${r} .reveal-on-scroll`).join(', ')
 
         // Helper to observe a list of elements
-        const observeElements = (observer: IntersectionObserver, list: Element[] | NodeListOf<HTMLElement>) => {
+        const observeElements = (observer: IntersectionObserver, list: Element[] | NodeListOf<Element>) => {
             Array.from(list).forEach((el) => {
                 const node = el as HTMLElement
                 if (node.classList.contains('reveal-visible')) return

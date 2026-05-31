@@ -1,5 +1,3 @@
-"use client"
-
 import { Activity, AlertTriangle, BarChart3, Brain, Building2, Factory, Globe2, Network, ShieldCheck, TrendingUp } from 'lucide-react'
 import { MetricCard, Panel, PremiumShell, ProgressBar, Sparkline, StatusBadge } from '@/components/premium/Studio'
 
@@ -29,6 +27,16 @@ const buyers = [
     { name: 'Lanxess', tier: 'Tier 2', x: '55%', y: '70%' },
     { name: 'Divis Labs', tier: 'Tier 2', x: '24%', y: '68%' },
 ]
+
+export function generateStaticParams() {
+    return [
+        { id: 'aarti-industries' },
+        { id: 'deepak-nitrite' },
+        { id: 'gujarat-fluorochem' },
+        { id: 'navin-fluorine' },
+        { id: 'srfltd' },
+    ]
+}
 
 export default function CompanyProfilePage() {
     return (

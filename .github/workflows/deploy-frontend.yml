@@ -24,11 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js app
+      - name: Build and export Next.js app
         run: npm run build
-
-      - name: Export static site
-        run: npm run export
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
